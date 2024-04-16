@@ -8,6 +8,7 @@ application = Flask(__name__)
 
 ### Code GitHub
 application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
+DBVAR=os.environ['DATABASE_URL']
 DBVAR = "postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
 DBVAR = 'postgresql://postgres:ecopathsmario@awseb-e-iam99xc5kj-stack-awsebrdsdatabase-cq8uxtinseb6.chgko6wiidj6.eu-north-1.rds.amazonaws.com:5432/ebdb'
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
